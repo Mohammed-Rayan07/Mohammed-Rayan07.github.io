@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" font-family="IBM Plex Mono, ui-monospace, monospace">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#2a2318" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1440" height="900" fill="#100d09"/>
+  <rect width="1440" height="900" fill="url(#grid)"/>
+
+  <text x="80" y="100" fill="#ffb43b" font-size="22" letter-spacing="2">VOICE DISPATCHER / INCIDENT BOARD</text>
+  <text x="80" y="150" fill="#efe6d4" font-size="44" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="800">Break it on purpose, then rebuild the system around it</text>
+
+  <g stroke="#6b4a16" stroke-width="4" stroke-linecap="round">
+    <path d="M1180 90v20M1194 80v40M1208 70v60M1222 86v28M1236 60v80M1250 78v44M1264 92v16M1278 72v56M1292 84v32M1306 66v68M1320 88v24M1334 76v48M1348 90v20"/>
+  </g>
+
+  <!-- Left: failures -->
+  <rect x="80" y="200" width="610" height="520" fill="#17130d" stroke="#3a3122"/>
+  <text x="110" y="244" fill="#ff5a36" font-size="18" letter-spacing="1">FAILURE MODES LOGGED ON TEST CALLS</text>
+  <line x1="110" y1="262" x2="660" y2="262" stroke="#3a3122"/>
+  <g font-size="24" fill="#efe6d4">
+    <rect x="110" y="292" width="14" height="14" fill="#ff5a36"/><text x="142" y="306">Hallucinated registrations</text>
+    <rect x="110" y="352" width="14" height="14" fill="#ff5a36"/><text x="142" y="366">Mangled postcodes</text>
+    <rect x="110" y="412" width="14" height="14" fill="#ff5a36"/><text x="142" y="426">Endpointing failures</text>
+    <rect x="110" y="472" width="14" height="14" fill="#ff5a36"/><text x="142" y="486">Slot confusion</text>
+    <rect x="110" y="532" width="14" height="14" fill="#ff5a36"/><text x="142" y="546">Dead air</text>
+    <rect x="110" y="592" width="14" height="14" fill="#ff5a36"/><text x="142" y="606">Repetitive responses</text>
+    <rect x="110" y="652" width="14" height="14" fill="#ff5a36"/><text x="142" y="666">Incorrect data extraction</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M700 460 H740" stroke="#ffb43b" stroke-width="3"/>
+  <path d="M738 450 L752 460 L738 470 z" fill="#ffb43b"/>
+
+  <!-- Right: what the architecture added -->
+  <rect x="760" y="200" width="600" height="520" fill="#17130d" stroke="#ffb43b"/>
+  <text x="790" y="244" fill="#ffb43b" font-size="18" letter-spacing="1">WHAT THE ARCHITECTURE ADDED</text>
+  <line x1="790" y1="262" x2="1330" y2="262" stroke="#3a3122"/>
+  <g font-size="24" fill="#efe6d4">
+    <rect x="790" y="296" width="14" height="14" fill="#ffb43b"/><text x="822" y="310">Validation</text>
+    <rect x="790" y="366" width="14" height="14" fill="#ffb43b"/><text x="822" y="380">Lookup-based confirmation</text>
+    <rect x="790" y="436" width="14" height="14" fill="#ffb43b"/><text x="822" y="450">Retry and repair paths</text>
+    <rect x="790" y="506" width="14" height="14" fill="#ffb43b"/><text x="822" y="520">Fallback mechanisms</text>
+    <rect x="790" y="576" width="14" height="14" fill="#ffb43b"/><text x="822" y="590">Tighter tool boundaries</text>
+    <rect x="790" y="646" width="14" height="14" fill="#ffb43b"/><text x="822" y="660">Better turn-taking</text>
+  </g>
+
+  <rect x="80" y="760" width="1280" height="80" fill="#17130d" stroke="#3a3122"/>
+  <text x="110" y="796" fill="#8be28f" font-size="20">RESULT</text>
+  <text x="110" y="826" fill="#efe6d4" font-size="22">Calls finish with an accurate, dispatch-ready ticket. The fix wasn’t another clever prompt.</text>
+</svg>

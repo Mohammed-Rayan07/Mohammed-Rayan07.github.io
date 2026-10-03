@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" font-family="IBM Plex Mono, ui-monospace, monospace">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#2a2318" stroke-width="1"/>
+    </pattern>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#ffb43b"/>
+    </marker>
+    <marker id="arrd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#8f8572"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="900" fill="#100d09"/>
+  <rect width="1440" height="900" fill="url(#grid)"/>
+
+  <text x="80" y="110" fill="#ffb43b" font-size="22" letter-spacing="2">STOCKPILOT / RECORD SALE / CONCURRENCY</text>
+  <text x="80" y="160" fill="#efe6d4" font-size="44" font-family="Big Shoulders Display, Impact, sans-serif" font-weight="800">Two checkouts. One unit left.</text>
+
+  <!-- Product row -->
+  <rect x="560" y="230" width="320" height="150" fill="#17130d" stroke="#ffb43b" stroke-width="2"/>
+  <text x="590" y="272" fill="#a39882" font-size="18">products · row #42</text>
+  <text x="590" y="320" fill="#efe6d4" font-size="26">Field radio</text>
+  <text x="590" y="358" fill="#ffb43b" font-size="24">quantity = 1</text>
+  <rect x="820" y="246" width="44" height="44" fill="none" stroke="#ffb43b" stroke-width="2"/>
+  <path d="M832 268v-8a10 10 0 0 1 20 0v8" fill="none" stroke="#ffb43b" stroke-width="2"/>
+  <rect x="828" y="266" width="28" height="18" fill="#ffb43b"/>
+
+  <!-- Checkout A -->
+  <rect x="80" y="470" width="420" height="300" fill="#17130d" stroke="#3a3122"/>
+  <text x="110" y="512" fill="#ffb43b" font-size="20">CHECKOUT A · t = 0ms</text>
+  <text x="110" y="562" fill="#efe6d4" font-size="20">BEGIN</text>
+  <text x="110" y="598" fill="#efe6d4" font-size="20">SELECT … FOR UPDATE</text>
+  <text x="130" y="630" fill="#a39882" font-size="17">→ lock acquired</text>
+  <text x="110" y="666" fill="#efe6d4" font-size="20">quantity 1 → 0</text>
+  <text x="110" y="702" fill="#efe6d4" font-size="20">INSERT stock_movement</text>
+  <text x="110" y="744" fill="#8be28f" font-size="22">COMMIT · sale recorded</text>
+
+  <!-- Checkout B -->
+  <rect x="940" y="470" width="420" height="300" fill="#17130d" stroke="#3a3122"/>
+  <text x="970" y="512" fill="#a39882" font-size="20">CHECKOUT B · t = 2ms</text>
+  <text x="970" y="562" fill="#efe6d4" font-size="20">BEGIN</text>
+  <text x="970" y="598" fill="#efe6d4" font-size="20">SELECT … FOR UPDATE</text>
+  <text x="990" y="630" fill="#a39882" font-size="17">→ waits for A’s lock</text>
+  <text x="970" y="666" fill="#efe6d4" font-size="20">re-reads quantity = 0</text>
+  <text x="970" y="702" fill="#efe6d4" font-size="20">ROLLBACK</text>
+  <text x="970" y="744" fill="#ff5a36" font-size="22">409 · out of stock</text>
+
+  <path d="M290 470 C 290 400, 480 330, 556 318" fill="none" stroke="#ffb43b" stroke-width="3" marker-end="url(#arr)"/>
+  <path d="M1150 470 C 1150 400, 960 330, 884 318" fill="none" stroke="#8f8572" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#arrd)"/>
+
+  <text x="80" y="840" fill="#a39882" font-size="19">Without the lock, both reads see quantity = 1 and both sales succeed. Postgres’s default isolation does not prevent this on its own.</text>
+</svg>
