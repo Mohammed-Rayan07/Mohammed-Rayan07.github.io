@@ -1,6 +1,6 @@
 # The Last Portfolio · Mohammad Rayan
 
-**Live: [mohammed-rayan07.github.io](https://mohammed-rayan07.github.io/)**
+**Live: [mohammad-rayan.vercel.app](https://mohammad-rayan.vercel.app/)** · mirror: [mohammed-rayan07.github.io](https://mohammed-rayan07.github.io/)
 
 Silicon Maze 2026, Dev track, Task 2. The Doomsday event has begun and every survivor has one mission: preserve your story. This is mine: the survivor record of an AI engineering student at NITK Surathkal, recovered from an archive node running on emergency power.
 
@@ -31,7 +31,7 @@ The site is one route through a maze. You enter at **Identity** and leave at **F
 | **4.1 Interface** | Amber-phosphor archive identity, Big Shoulders + IBM Plex type system, consistent housings, smooth sector navigation, motion that answers actions |
 | **4.2 Responsive** | Tested at 320, 375, 768, 1024, 1200, 1280, 1440 and 1920 px with no horizontal overflow; bottom navigation on mobile |
 | **5.1 Contact** | Final transmission: email (with copy), LinkedIn, GitHub, and a composer that opens your email app |
-| **5.2 Deployment** | GitHub Pages, published from the `gh-pages` branch with `npm run deploy` |
+| **5.2 Deployment** | Vercel production at [mohammad-rayan.vercel.app](https://mohammad-rayan.vercel.app/), mirrored on GitHub Pages (`gh-pages` branch, `npm run deploy`) |
 
 Accessibility: everything reachable by keyboard, visible focus, dialogs that take focus and close with Esc (record files also trap focus), a skip link, `prefers-reduced-motion` respected (static maze, no decode or boot animation), and alt text on every image.
 
@@ -59,6 +59,7 @@ npm install
 npm run dev      # http://localhost:5173
 npm run build    # type-check and build to dist/
 npm run deploy   # build and publish dist/ to the gh-pages branch
+npx vercel deploy --prod   # publish to Vercel production
 ```
 
 Every fact on the site lives in [`src/data/content.ts`](src/data/content.ts). Edit that file to update the portfolio.
