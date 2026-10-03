@@ -9,7 +9,7 @@ import { GitHubIcon, LinkedInIcon } from './SkillIcon'
 
 const channels = [
   { id: 'email', label: 'Email', value: links.email, href: `mailto:${links.email}`, Icon: Mail, strength: 4 },
-  { id: 'linkedin', label: 'LinkedIn', value: 'in/mohammed-rayan', href: links.linkedin, Icon: LinkedInIcon, strength: 4 },
+  { id: 'linkedin', label: 'LinkedIn', value: 'in/mohammed-rayan-835118389', href: links.linkedin, Icon: LinkedInIcon, strength: 4 },
   { id: 'github', label: 'GitHub', value: 'Mohammed-Rayan07', href: links.github, Icon: GitHubIcon, strength: 4 },
 ] as const
 

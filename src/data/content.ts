@@ -15,6 +15,7 @@ export const survivor = {
   principle: 'Don’t just make the model smarter. Build the system around it.',
   intro:
     'I spend far more time building things than talking about building them. Voice agents, multi-agent systems, business automation, dashboards and digital products, usually starting from a real problem, a rough idea and an unreasonable amount of debugging.',
+  interests: ['AI agents', 'Automation', 'Applied AI', 'Systems', 'Product building'],
   knownFor: ['AI agents', 'Automation', 'Voice AI', 'Product building', 'System design'],
   status: ['Online', 'Building', 'Iterating'],
 }
@@ -230,7 +231,7 @@ export const arsenal: SkillCategory[] = [
     skills: [
       { id: 'n8n', name: 'n8n', icon: 'siN8n', note: 'Workflows for client automations.', projects: [] },
       { id: 'make', name: 'Make', icon: 'siMake', note: 'No-code glue between services.', projects: [] },
-      { id: 'webhooks', name: 'APIs and webhooks', glyph: 'webhook', note: 'Event-driven, idempotent handlers.', projects: ['advocall', 'jarvis', 'dispatch', 'ayah'] },
+      { id: 'webhooks', name: 'APIs and webhooks', glyph: 'webhook', note: 'Event-driven, idempotent handlers.', projects: ['advocall', 'jarvis', 'dispatch'] },
       { id: 'crm', name: 'CRM integrations', glyph: 'contacts', note: 'Leads, bookings, follow-ups.', projects: [] },
       { id: 'whatsapp', name: 'WhatsApp automation', icon: 'siWhatsapp', note: 'Lead response and reactivation.', projects: ['raynix'] },
       { id: 'gapi', name: 'Google Calendar and Drive', icon: 'siGooglecalendar', note: 'OAuth, timezone-safe events.', projects: ['jarvis'] },
@@ -256,11 +257,11 @@ export const arsenal: SkillCategory[] = [
     blurb: 'How the work leaves my machine and earns its keep.',
     skills: [
       { id: 'git', name: 'Git and GitHub', icon: 'siGithub', note: 'Small commits, readable history.', projects: ['jarvis', 'advocall', 'rcie', 'stockpilot', 'raynix', 'linreg'] },
-      { id: 'vercel', name: 'Vercel', icon: 'siVercel', note: 'Preview and production deploys.', projects: ['stockpilot', 'ayah'] },
+      { id: 'vercel', name: 'Vercel', icon: 'siVercel', note: 'Preview and production deploys.', projects: ['stockpilot'] },
       { id: 'vitest', name: 'Vitest', icon: 'siVitest', note: 'Tests against a real database.', projects: ['advocall', 'stockpilot'] },
       { id: 'adapters', name: 'Mock and live adapters', glyph: 'plug', note: 'Every service swappable by one flag.', projects: ['advocall', 'raynix', 'rcie'] },
       { id: 'funnels', name: 'Funnels and payments', glyph: 'funnel', note: 'Positioning, checkout, upsells, email.', projects: ['ayah'] },
-      { id: 'aicode', name: 'AI coding agents', icon: 'siClaude', note: 'Spec-first, agent-assisted builds.', projects: ['jarvis', 'stockpilot', 'raynix', 'ayah'] },
+      { id: 'aicode', name: 'AI coding agents', icon: 'siClaude', note: 'Spec-first, agent-assisted builds.', projects: ['jarvis', 'stockpilot', 'raynix'] },
     ],
   },
 ]
@@ -580,7 +581,7 @@ export const projects: Project[] = [
       { value: '$12.99', label: 'launch price, from $69' },
       { value: 'Live', label: 'storefront, monetised' },
     ],
-    stack: ['funnels', 'ts', 'next', 'react', 'tw', 'vercel'],
+    stack: ['funnels', 'ts', 'next', 'react', 'tw'],
     extraStack: ['Lovable (live store)', 'Dodo Payments (rebuild)', 'Supabase (rebuild)', 'Cloudflare R2 (rebuild)', 'Resend (rebuild)'],
     images: [
       {

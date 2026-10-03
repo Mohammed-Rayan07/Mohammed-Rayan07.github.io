@@ -86,6 +86,7 @@ export function Terminal({ open, onClose, onOpenProject }: { open: boolean; onCl
         say(`${survivor.designation} · ${survivor.role}`)
         say(`${survivor.base} · origin ${survivor.origin}`)
         say(`function: ${survivor.primaryFunction.toLowerCase()}`)
+        say(`interests: ${survivor.interests.join(', ').toLowerCase()}`)
         say(`principle: "${survivor.principle}"`, 'dim')
         break
       case 'story':

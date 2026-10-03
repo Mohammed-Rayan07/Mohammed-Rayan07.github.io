@@ -46,9 +46,9 @@ export function Hero({ ready }: { ready: boolean }) {
           </motion.p>
 
           <motion.div {...enter(0.45)} className="mt-7">
-            <h2 className="sr-only">Areas of interest</h2>
-            <ul className="flex flex-wrap gap-2" aria-label="Known for">
-              {survivor.knownFor.map((k) => (
+            <h2 className="font-mono text-xs text-dust-2">Areas of interest</h2>
+            <ul className="mt-2.5 flex flex-wrap gap-2">
+              {survivor.interests.map((k) => (
                 <li key={k} className="chip border-amber-deep text-bone">
                   <span className="h-1 w-1 bg-amber" aria-hidden="true" />
                   {k}

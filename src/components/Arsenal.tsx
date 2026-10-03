@@ -24,7 +24,7 @@ export function Arsenal({
     <section id="arsenal" aria-labelledby="arsenal-title" className="border-y border-line bg-ash-2">
       <div className="mx-auto max-w-[1320px] px-4 py-20 sm:px-8 lg:py-28">
         <SectionHeader index={3} id="arsenal" title="Arsenal">
-          Tools I have actually used in shipped work, {totalSkills} of them in {arsenal.length} categories. The pips show how many records in the
+          Tools I have actually built with, {totalSkills} of them in {arsenal.length} categories. The pips show how many records in the
           archive used each one. Select a tool to trace where it was deployed.
         </SectionHeader>
 
