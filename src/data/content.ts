@@ -15,7 +15,7 @@ export const survivor = {
   principle: 'Don’t just make the model smarter. Build the system around it.',
   intro:
     'I spend far more time building things than talking about building them. Voice agents, multi-agent systems, business automation, dashboards and digital products, usually starting from a real problem, a rough idea and an unreasonable amount of debugging.',
-  interests: ['AI agents', 'Automation', 'Applied AI', 'Systems', 'Product building'],
+  interests: ['AI agents', 'Automation', 'Applied AI', 'Systems', 'Product building', 'AI safety and security'],
   knownFor: ['AI agents', 'Automation', 'Voice AI', 'Product building', 'System design'],
   status: ['Online', 'Building', 'Iterating'],
 }
